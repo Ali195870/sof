@@ -428,7 +428,7 @@ class Bot(BaseBot):
          
 
          if message.lower().lstrip().startswith(("-list", "!list")):
-                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 💳VIP Tickets💳\n• !mod or -mod(Only mods)\n• !admin or -admin(Only admins) ")
+                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 💳VIP Tickets💳\n• !mod list or -mod list(Only mods)\n• !admin or -admin(Only admins) ")
 
         
          if message.lower().lstrip().startswith(("-buy" , "!buy")):
@@ -444,7 +444,7 @@ class Bot(BaseBot):
                     await self.highrise.send_whisper(user.id,"Please share your feedback/suggestions with @stonedzillia9 to improve our environment. Your contributions are valuable and will help us improve.")  
 
          if user.username.lower() in self.moderators:
-            if message.lower().lstrip().startswith(("-mod","!mod")):
+            if message.lower().lstrip().startswith(("-mod list","!mod list")):
                await self.highrise.send_whisper(user.id,"\n  \n•Moderating :\n ____________________________\n !kick @ \n !ban @ \n !mute @ \n !unmute @ ")
                await self.highrise.send_whisper(user.id,"\n  \n•Teleporting :\n ____________________________\n-here @ :to summon\n -tele @ tele_key. : telepport to a certain teleport\nExample -tele @username vip")
                await self.highrise.send_whisper(user.id,"\n   \n• Tipping  :\n____________________________\n-tip 1\n-tip 5 \n-tip 10 \n-wallet to veiw the bot wallet.\n____________________________\n")
@@ -575,7 +575,7 @@ class Bot(BaseBot):
               parts = message.split()
               if len(parts) == 1:
                  await self.highrise.teleport(f"{user.id}", Position(17, 0.0,3.5))
-         if message.lower().startswith(('-floor3','-3','-mod')):
+         if message.lower().startswith(('-3')) or message == '-mod' or message == '-mod ':
             if user.username.lower() in self.moderators:
               parts = message.split()
               if len(parts) == 1:
