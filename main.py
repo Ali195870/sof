@@ -432,11 +432,11 @@ class Bot(BaseBot):
 
         
          if message.lower().lstrip().startswith(("-buy" , "!buy")):
-             await self.highrise.chat(f"\n____________________________\n• 1-month vip = 500g for permeant vip 💳 \n• 1-day vip = 100g for 24h vip 🎫\n Tip bot to buy ,you will be aceessed to use tele commands.\n____________________________\n ")
+             await self.highrise.chat(f"\n____________________________\n• 1-month vip = 500g for 30 days vip 💳 \n• 1-day vip = 100g for 24h vip 🎫\n Tip bot to buy ,you will be aceessed to use tele commands.\n____________________________\n ")
         
      
          if message == "-teleports" or message =="!teleports" :
-                    await self.highrise.chat(f"\n • Teleports\n ____________________________\n-green \n-yellow\n-blue\n-pink-g or -1: Ground floor \n-dj or -2 : DJ place (only mods) \n-vip or -v : (vip only), make sure you have 🎫VIP Tickets 🎫 \n• type -buy or !buy for details.")
+                    await self.highrise.chat(f"\n • Teleports\n ____________________________\n-green \n-yellow\n-blue\n-pink\n-g or -1: Ground floor \n-dj or -2 : DJ place (only mods) \n-vip or -v : (vip only), make sure you have 🎫VIP Tickets 🎫 \n• type -buy or !buy for details.")
          if message.lower().lstrip().startswith(("!rules", "-rules")):
            await self.highrise.chat(f"\n\n        RULES\n ____________________________\n 1. NO UNDERAGE \n 2. No advertising\n 3. No hate speech \n 4. No begging (those trash will be immediately banned 🚫) \n 5. No spamming ")
          if message.lower().lstrip().startswith(("-feedback", "!feedback")):
