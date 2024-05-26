@@ -170,7 +170,7 @@ class Bot(BaseBot):
          print("Ali is booting ...")
        
 
-         self.highrise.tg.create_task(self.highrise.walk_to(Position(5, 0.25,1.5, facing='FrontRight')))
+         self.highrise.tg.create_task(self.highrise.walk_to(Position(17, 0,3.5, facing='FrontRight')))
          self.load_temporary_vips()
          self.load_moderators()
          await asyncio.sleep(10)
@@ -488,7 +488,7 @@ class Bot(BaseBot):
                     await self.highrise.teleport(user_id, Position(6,9,3.5))
                 elif message.lower().startswith(('-tele')) and  message.lower().endswith("pink"):   
                   if user.username.lower() in self.moderators:
-                    await self.highrise.teleport(user_id, Position(5,14.75,5.5))
+                    await self.highrise.teleport(user_id, Position(17,14.75,14))
                         
                         
                         
@@ -534,7 +534,7 @@ class Bot(BaseBot):
               if len(parts) == 1:
                  await self.highrise.teleport(f"{user.id}", Position(18.5, 18.75,0.5))
       
-         if message.startswith(('-floor1','-g','-1')):
+         if message.startswith(('-floor1','-1')) or message == "-g" or message == "-g ":
              parts = message.split()
              if len(parts) == 1:
                 await self.highrise.teleport(f"{user.id}", Position(16,0,11.5))
@@ -546,14 +546,14 @@ class Bot(BaseBot):
              parts = message.split()
              if len(parts) == 1:
                 await self.highrise.teleport(f"{user.id}", Position(6,9,3.5)) 
-         if message.startswith(('-yelloow')):
+         if message.startswith(('-yellow')):
              parts = message.split()
              if len(parts) == 1:
                 await self.highrise.teleport(f"{user.id}", Position(4.5,14.7,3))  
          if message.startswith(('-pink')):
              parts = message.split()
              if len(parts) == 1:
-                await self.highrise.teleport(f"{user.id}", Position(5,14.75,5.5))  
+                await self.highrise.teleport(f"{user.id}", Position(17,14.75,14))  
          if message.lower().startswith("loop"):
            parts = message.split()
            E = parts[1]
