@@ -418,7 +418,7 @@ class Bot(BaseBot):
                 await self.highrise.send_whisper(user.id, "\n• For loops say -loop or !loop then the emote number.")         
          if message.lower().lstrip().startswith(("!loop","-loop")):
           await self.highrise.send_whisper(user.id,"\n• loops\n ____________________________\nMention loop before the emote numer\n ____________________________")
-         if message.lower().lstrip().startswith(("!admin","-admin")):
+         if message.lower().lstrip().startswith(("!admin list","-admin list")):
            if user.username.lower() in moderators :
              await self.highrise.send_whisper(user.id,"\n____________________________\n• Give mod & vip :\n-give @ mod \n-give @ mod 24h\n-give @ vip 🎫 \n• Remove mod\vip\n-remove @ mod\vip\n!time @ : to check time of temp mod• Advertising\n-announce + text\n-clear\n ____________________________")
              
@@ -428,7 +428,7 @@ class Bot(BaseBot):
          
 
          if message.lower().lstrip().startswith(("-list", "!list")):
-                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 💳VIP Tickets💳\n• !mod list or -mod list(Only mods)\n• !admin or -admin(Only admins) ")
+                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 💳VIP Tickets💳\n• !mod list or -mod list(Only mods)\n• !admin list or -admin list (Only admins) ")
 
         
          if message.lower().lstrip().startswith(("-buy" , "!buy")):
