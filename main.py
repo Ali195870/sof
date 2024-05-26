@@ -468,7 +468,7 @@ class Bot(BaseBot):
                 elif message.lower().startswith(('-tele')) and  message.lower().endswith("vip"):   
                   if user.username.lower() in self.moderators:
                     await self.highrise.teleport(user_id, Position(15.5, 15.25,4.5))
-                elif message.lower().startswith(('-tele')) and  message.lower().endswith("dj","floor2"):   
+                elif message.lower().startswith(('-tele')) and  message.lower().endswith(("dj")):   
                   if user.username.lower() in self.moderators:
                     await self.highrise.teleport(user_id, Position(17.5,9.25,2.5))
                 elif message.lower().startswith(('-tele')) and  message.lower().endswith(("g","floor1")):   
@@ -482,7 +482,7 @@ class Bot(BaseBot):
                     await self.highrise.teleport(user_id, Position(4.5,14.7,3))
                 elif message.lower().startswith(('-tele')) and  message.lower().endswith("green"):   
                   if user.username.lower() in self.moderators:
-                    await self.highrise.teleport(user_id, Position(9,0.25,11.5))
+                    await self.highrise.teleport(user_id, Position(16,9,13))
                 elif message.lower().startswith(('-tele')) and  message.lower().endswith("blue"):   
                   if user.username.lower() in self.moderators:
                     await self.highrise.teleport(user_id, Position(6,9,3.5))
@@ -541,7 +541,7 @@ class Bot(BaseBot):
          if message.startswith(('-green')):
              parts = message.split()
              if len(parts) == 1:
-                await self.highrise.teleport(f"{user.id}", Position(9,0.25,11.5))  
+                await self.highrise.teleport(f"{user.id}", Position(16,9,13))  
          if message.startswith(('-blue')):
              parts = message.split()
              if len(parts) == 1:
