@@ -381,11 +381,11 @@ class Bot(BaseBot):
          
 
          if message.lower().lstrip().startswith(("-list", "!list")):
-                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 🎫VIP Tickets🎫\n• !mod or -mod(Only mods)\n• !admin or -admin(Only admins) ")
+                await self.highrise.chat("\\commands you can use:\n• !feedback or -feedback \n• !teleports or -teleports \n• -buy or !buy for \n 💳VIP Tickets💳\n• !mod or -mod(Only mods)\n• !admin or -admin(Only admins) ")
 
         
          if message.lower().lstrip().startswith(("-buy" , "!buy")):
-             await self.highrise.chat(f"\n____________________________\n• 1-month vip = 500g for permeant vip 🎫 \n• 1-day vip = 100g for 24h vip 🎫\n Tip bot to buy ,you will be aceessed to use tele commands.\n____________________________\n ")
+             await self.highrise.chat(f"\n____________________________\n• 1-month vip = 500g for permeant vip 💳 \n• 1-day vip = 100g for 24h vip 🎫\n Tip bot to buy ,you will be aceessed to use tele commands.\n____________________________\n ")
         
      
          if message == "-teleports" or message =="!teleports" :
@@ -811,7 +811,7 @@ class Bot(BaseBot):
         elif message.lower() == "-stop following":
             self.following_username = None
           
-            await self.highrise.walk_to(Position(5, 0.25,1.5,"FrontLeft"))
+            await self.highrise.walk_to(Position(5, 0.25,1.5, facing='FrontRight'))
 
   
   
@@ -827,9 +827,9 @@ class Bot(BaseBot):
               if receiver.id == Counter.bot_id:    
                  sender_username = sender.username.lower()
                  if sender_username not in self.membership:
-                   self.temporary_vips[sender_username] = int(time.time()) + 24 * 60 * 60 *360*10
+                   self.temporary_vips[sender_username] = int(time.time()) + 24 * 60 * 60 *30
                    self.save_temporary_vips()
-                   await self.highrise.chat(f"Thank you {sender_username} for purchasing Permeant vip ticket , you teleport to the vip now \n-vip or -v : to go vip place🎫 . \n-g:Ground floor") 
+                   await self.highrise.chat(f"Thank you {sender_username} for purchasing 1-month vip ticket , you teleport to the vip now \n-vip or -v : to go vip place 💳 . \n-g:Ground floor") 
                
             elif tip.amount == 100:
               if receiver.id == Counter.bot_id:    
