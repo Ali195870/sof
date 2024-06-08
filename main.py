@@ -226,7 +226,9 @@ class Bot(BaseBot):
           print(f"An exception occured: {e}")  
     async def on_emote(self, user: User ,emote_id : str , receiver: User | None )-> None:
       print (f"{user.username} , {emote_id}")
-
+    async def on_user_leave(self, user: User) -> None:
+      if user.id in self.dancer:
+       self.dancer.remove(user.id)
     async def on_user_join(self, user: User, position: Position | AnchorPosition) -> None:
 
      try:
@@ -276,7 +278,6 @@ class Bot(BaseBot):
     async def on_chat(self, user: User, message: str) -> None:
       try:
          user_input = None
-         print(f"{user.username} said: {message}")     
          if message.lower().startswith("-announce ") and user.username.lower() in moderators:
            parts = message.split()
            self.should_stop = None
@@ -920,8 +921,7 @@ class Bot(BaseBot):
 
 
 
-        print(f"{user.username}: {pos}")
-
+    
    
           
   
