@@ -875,16 +875,16 @@ class Bot(BaseBot):
               if receiver.id == Counter.bot_id:    
                  sender_username = sender.username.lower()
                  if sender_username not in self.membership:
-                   self.temporary_vips[sender_username] = int(time.time()) + 24 * 60 * 60 *30
-                   self.save_temporary_vips()
+                   self.membership[sender_username] = int(time.time()) + 24 * 60 * 60 *30
+                   self.save_membership()
                    await self.highrise.chat(f"Thank you {sender_username} for purchasing 1-month vip ticket , you teleport to the vip now \n-vip or -v : to go vip place 💳 . \n-g:Ground floor") 
                
             elif tip.amount == 100:
               if receiver.id == Counter.bot_id:    
                  sender_username = sender.username.lower()
                  if sender_username not in self.membership:
-                   self.temporary_vips[sender_username] = int(time.time()) + 24 * 60 * 60 
-                   self.save_temporary_vips()
+                   self.membership[sender_username] = int(time.time()) + 24 * 60 * 60 
+                   self.save_membership()
                    await self.highrise.chat(f"Thank you {sender_username} for purchasing 24h vip ticket , you teleport to the vip now \n-vip or -v : to go vip place🎫 . \n-g:Ground floor") 
            
                  
